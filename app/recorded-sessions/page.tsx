@@ -29,6 +29,7 @@ export default function RecordedSessionsPage() {
   }, [student]);
 
   const fetchRecordedSessions = async () => {
+    if (!student) return;
     try {
       const { data, error } = await supabase
         .from('sessions')
