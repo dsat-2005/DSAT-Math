@@ -35,8 +35,9 @@ export default function RecordedSessionsPage() {
         .select('*')
         .eq('is_published', true)
         .not('recorded_url', 'is', null)
+        .eq('user_id', student.id)  // <-- هنا فلترة حسب المستخدم
         .order('date_time', { ascending: false });
-
+  
       if (error) throw error;
       setSessions(data || []);
     } catch (error) {
