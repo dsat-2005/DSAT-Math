@@ -29,6 +29,7 @@ export default function MaterialsPage() {
   }, [student]);
 
   const fetchSessionsWithMaterials = async () => {
+    if (!student) return;
     try {
       const { data, error } = await supabase
         .from('sessions')
