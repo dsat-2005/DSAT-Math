@@ -30,12 +30,12 @@ export function DashboardLayout({ children }: DashboardLayoutProps) {
                 <Menu className="h-6 w-6" />
               </Button>
               <div className="flex items-center space-x-3">
-                <div className="w-12 h-12 relative bg-blue-100 rounded-lg flex items-center justify-center">
+                <div className="relative flex items-center justify-center">
                   <Image
                     src="/logo.png"
                     alt="Logo"
-                    width={32}
-                    height={32}
+                    width={64}
+                    height={64}
                     className="object-contain"
                   />
                 </div>
