@@ -30,6 +30,7 @@ export default function DashboardPage() {
   }, [student]);
 
   const fetchUpcomingSessions = async () => {
+    if (!student) return;
     try {
       const now = new Date().toISOString();
       const { data, error } = await supabase
