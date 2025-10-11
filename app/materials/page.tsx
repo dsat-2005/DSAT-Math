@@ -35,8 +35,9 @@ export default function MaterialsPage() {
         .select('*')
         .eq('is_published', true)
         .not('materials_url', 'is', null)
+        .eq('user_id', student.id)  // <-- فلترة حسب المستخدم الحالي
         .order('date_time', { ascending: false });
-
+  
       if (error) throw error;
       setSessions(data || []);
     } catch (error) {
