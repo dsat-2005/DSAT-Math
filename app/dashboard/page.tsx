@@ -37,8 +37,9 @@ export default function DashboardPage() {
         .select('*')
         .eq('is_published', true)
         .gte('date_time', now)
+        .eq('user_id', student.id) // <-- هنا
         .order('date_time', { ascending: true });
-
+  
       if (error) throw error;
       setSessions(data || []);
     } catch (error) {
