@@ -63,12 +63,12 @@ export default function LoginPage() {
       <Card className="w-full max-w-md shadow-lg">
         <CardHeader className="text-center space-y-4">
           <div className="flex justify-center">
-            <div className="w-32 h-32 relative bg-blue-100 rounded-2xl flex items-center justify-center">
+            <div className="relative flex items-center justify-center">
               <Image
                 src="/logo.png"
                 alt="Digital Math for SAT"
-                width={96}
-                height={96}
+                width={128}
+                height={128}
                 className="object-contain"
               />
             </div>
